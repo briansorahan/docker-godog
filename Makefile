@@ -6,5 +6,6 @@ push: image
 image: .image
 .image: Dockerfile
 	@docker build -t $(IMG) .
+	@touch $@
 
 .PHONY: image push
